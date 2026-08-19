@@ -96,7 +96,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "office_employee_data"
+			"table": "ETL_Metadata"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
