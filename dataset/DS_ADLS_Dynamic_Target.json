@@ -1,0 +1,35 @@
+{
+	"name": "DS_ADLS_Dynamic_Target",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_TargetPath": {
+				"type": "string"
+			},
+			"p_FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset().p_FileName",
+				"folderPath": {
+					"value": "@dataset().p_TargetPath",
+					"type": "Expression"
+				},
+				"fileSystem": "saitejascontainer1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
