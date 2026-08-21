@@ -100,7 +100,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"p_FileName": {
-											"value": "@concat(item().SourceTable, '.csv')",
+											"value": "@concat(item().SourceTable,'.csv')",
 											"type": "Expression"
 										}
 									}
