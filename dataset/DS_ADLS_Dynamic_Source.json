@@ -19,7 +19,10 @@
 					"value": "@dataset().p_FileName",
 					"type": "Expression"
 				},
-				"folderPath": "Project2",
+				"folderPath": {
+					"value": "@dataset().p_FileName",
+					"type": "Expression"
+				},
 				"fileSystem": {
 					"value": "saitejascontainer1",
 					"type": "Expression"
