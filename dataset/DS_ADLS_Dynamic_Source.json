@@ -19,6 +19,7 @@
 					"value": "@dataset().p_FileName",
 					"type": "Expression"
 				},
+				"folderPath": "output/customers",
 				"fileSystem": {
 					"value": "saitejascontainer1",
 					"type": "Expression"
