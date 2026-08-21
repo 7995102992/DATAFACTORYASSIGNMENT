@@ -146,7 +146,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"p_FileName": {
-											"value": "@item().SourceFile",
+											"value": "@replace(\n    replace(\n        replace(\n            item().SourcePathPattern,\n            '{yyyy}',\n            formatDateTime(utcnow(),'yyyy')\n        ),\n        '{MM}',\n        formatDateTime(utcnow(),'MM')\n    ),\n    '{dd}',\n    formatDateTime(utcnow(),'dd')\n)",
 											"type": "Expression"
 										}
 									}
@@ -158,11 +158,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"p_TargetPath": {
-											"value": "@item().TargetPath",
+											"value": "@item().TargetSchema",
 											"type": "Expression"
 										},
 										"p_FileName": {
-											"value": "@item().TargetFile",
+											"value": "@concat(item().TargetTable,'.csv')",
 											"type": "Expression"
 										}
 									}
